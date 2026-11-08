@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10121c">
+<title>موج | رادیو آنلاین</title>
+<style>
+:root{color-scheme:dark;--bg:#10121c;--panel:#191c29;--muted:#9a9db1;--text:#f6f5fb;--purple:#a78bfa;--pink:#f472b6;--green:#59e1ae;--line:#2d3040}
+*{box-sizing:border-box} body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 78% 5%,#342555 0,transparent 34%),radial-gradient(ellipse at 14% 94%,#21343a 0,transparent 30%),var(--bg);color:var(--text);font-family:Tahoma,"Segoe UI",sans-serif;display:grid;place-items:center;padding:28px}
+main{width:min(100%,760px)} .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}.brand{display:flex;gap:12px;align-items:center;font-size:19px;font-weight:800;letter-spacing:.2px}.brand-icon{width:43px;height:43px;border-radius:15px;background:linear-gradient(140deg,var(--purple),var(--pink));display:grid;place-items:center;box-shadow:0 8px 30px #a78bfa44}.brand-icon svg{width:23px}.eyebrow{color:var(--muted);font-size:12px;letter-spacing:.3px}.live-badge{border:1px solid #ffffff20;background:#ffffff09;border-radius:20px;padding:9px 13px;color:#d7d4e4;font-size:12px;display:flex;align-items:center;gap:8px}.dot{width:8px;height:8px;border-radius:50%;background:#686b79}.dot.on{background:var(--green);box-shadow:0 0 12px var(--green)}
+.card{background:linear-gradient(145deg,#202333ed,#171a26f5);border:1px solid #ffffff12;border-radius:27px;padding:clamp(22px,5vw,42px);box-shadow:0 25px 80px #0005;backdrop-filter:blur(18px)}.hero{text-align:center}.art{width:156px;height:156px;margin:0 auto 24px;border-radius:30px;background:linear-gradient(145deg,#362354,#171d30);border:1px solid #ffffff19;display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 16px 45px #0005}.art:before,.art:after{content:"";position:absolute;border:1px solid #ffffff15;border-radius:50%;width:185px;height:185px}.art:after{width:225px;height:225px}.equalizer{display:flex;align-items:center;gap:6px;height:58px;z-index:1}.equalizer i{display:block;width:6px;height:20px;border-radius:5px;background:linear-gradient(var(--pink),var(--purple));opacity:.85}.playing .equalizer i{animation:wave .85s ease-in-out infinite alternate}.equalizer i:nth-child(2){animation-delay:-.55s}.equalizer i:nth-child(3){animation-delay:-.2s}.equalizer i:nth-child(4){animation-delay:-.7s}.equalizer i:nth-child(5){animation-delay:-.35s}@keyframes wave{to{height:55px}}h1{font-size:clamp(24px,4vw,32px);margin:0 0 8px}.subtitle{color:var(--muted);font-size:14px;margin:0}.station-link{display:inline-flex;align-items:center;gap:7px;margin-top:17px;color:#d6c9ff;text-decoration:none;font-size:13px}.station-link:hover{color:white}.divider{height:1px;background:var(--line);margin:28px 0}.field-label{display:block;font-size:13px;color:#d7d7e1;margin:0 0 10px}.url-row{display:flex;gap:10px}.url-input{min-width:0;flex:1;background:#11141f;border:1px solid #343748;border-radius:13px;padding:14px 15px;color:white;font:13px Tahoma,sans-serif;outline:none;direction:ltr;text-align:left}.url-input:focus{border-color:var(--purple);box-shadow:0 0 0 3px #a78bfa20}.url-input::placeholder{color:#74788d}.hint{color:#898da2;font-size:11px;line-height:1.8;margin:10px 2px 0}.controls{display:flex;justify-content:center;align-items:center;gap:14px;margin:28px 0 22px}.btn{border:0;border-radius:14px;padding:13px 20px;font:700 14px Tahoma,sans-serif;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:.18s;white-space:nowrap}.btn:hover{transform:translateY(-1px);filter:brightness(1.08)}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;filter:none}.primary{background:linear-gradient(120deg,#9b7afa,#c16ddb);color:white;min-width:150px;box-shadow:0 8px 23px #9b7afa30}.secondary{background:#292c3a;color:#eeeeF7;border:1px solid #ffffff12}.record{background:#34202d;color:#ffb6cf;border:1px solid #f472b633}.record.active{background:#5a2030;color:#fff;animation:pulse 1.5s infinite}@keyframes pulse{50%{box-shadow:0 0 0 6px #f472b622}}.status{min-height:22px;text-align:center;color:#b3b5c5;font-size:12px}.status.error{color:#ff9eac}.status.success{color:var(--green)}.record-panel{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#11141f;border:1px solid #ffffff0c;border-radius:14px;padding:13px 16px;margin-top:18px}.record-info{display:flex;align-items:center;gap:10px;font-size:12px;color:#c7c7d4}.rec-dot{width:9px;height:9px;border-radius:50%;background:#606373}.rec-dot.active{background:#ff577e;box-shadow:0 0 12px #ff577e}.timer{direction:ltr;color:#f1d1dd;font-variant-numeric:tabular-nums;font-size:13px}.download{color:#d8caff;text-decoration:none;font-size:12px;font-weight:bold;white-space:nowrap}.download.disabled{opacity:.35;pointer-events:none}.footnote{margin:17px 2px 0;color:#777b90;font-size:10px;line-height:1.8}.footer{text-align:center;color:#777b8e;font-size:11px;margin-top:18px}svg{width:18px;height:18px;fill:currentColor}@media(max-width:520px){body{padding:17px}.top{margin-bottom:18px}.live-badge{font-size:10px;padding:8px}.url-row{flex-direction:column}.url-input{width:100%}.controls{gap:8px}.btn{padding:12px 13px;font-size:12px}.primary{min-width:120px}.record-panel{flex-wrap:wrap}.art{width:138px;height:138px}}
+</style>
+</head>
+<body>
+<main>
+  <header class="top"><div class="brand"><span class="brand-icon"><svg viewBox="0 0 24 24"><path d="M4 10v4h3l5 4V6l-5 4H4zm11.5 2a4.5 4.5 0 0 0-2.5-4.03v8.05a4.5 4.5 0 0 0 2.5-4.02zM13 3.23v2.06a7 7 0 0 1 0 13.42v2.06a9 9 0 0 0 0-17.54z"/></svg></span><span>موج <span class="eyebrow" style="display:block;margin-top:3px">رادیوی آنلاین شما</span></span></div><div class="live-badge"><span class="dot" id="liveDot"></span><span id="liveText">آمادهٔ پخش</span></div></header>
+  <section class="card">
+    <div class="hero" id="hero">
+      <div class="art"><div class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div>
+      <h1>همیشه روی موج</h1><p class="subtitle">رادیوی آنلاین را گوش کنید و لحظه‌هایش را ضبط کنید</p>
+      <a class="station-link" href="https://station-funk.com/" target="_blank" rel="noopener noreferrer">Station Funk <span>↗</span></a>
+    </div>
+    <div class="divider"></div>
+    <label class="field-label" for="streamUrl">آدرس مستقیم پخش زنده</label>
+    <div class="url-row"><input class="url-input" id="streamUrl" type="url" inputmode="url" placeholder="https://example.com/live.mp3" autocomplete="off"><button class="btn secondary" id="loadBtn" type="button">اعمال آدرس</button></div>
+    <p class="hint">لینک مستقیم استریم رادیو (مانند MP3 یا AAC) را وارد کنید. پیوند Station Funk بالا وب‌سایت ایستگاه را باز می‌کند؛ در صورت دسترسی، آدرس پخش مستقیم را از آن دریافت و اینجا وارد کنید.</p>
+    <audio id="audio" preload="none" crossorigin="anonymous"></audio>
+    <div class="controls">
+      <button class="btn primary" id="playBtn" type="button"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg><span>پخش آنلاین</span></button>
+      <button class="btn secondary" id="stopBtn" type="button" disabled><svg viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg><span>توقف</span></button>
+      <button class="btn record" id="recordBtn" type="button" disabled><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/></svg><span>ضبط زنده</span></button>
+    </div>
+    <div class="status" id="status" role="status" aria-live="polite">برای شروع، آدرس مستقیم استریم را وارد کنید.</div>
+    <div class="record-panel"><div class="record-info"><span class="rec-dot" id="recDot"></span><span id="recLabel">ضبط آغاز نشده</span><span class="timer" id="timer">00:00</span></div><a class="download disabled" id="downloadLink" href="#" download>دانلود فایل ضبط‌شده ↓</a></div>
+    <p class="footnote">ضبط در مرورگر شما انجام می‌شود و روی سرور ذخیره نمی‌شود. ضبط صدا به پشتیبانی مرورگر و مجوزهای CORS استریم وابسته است؛ اگر فایل بی‌صدا بود، ارائه‌دهندهٔ رادیو ممکن است ضبط از دامنهٔ دیگر را محدود کرده باشد.</p>
+  </section>
+  <footer class="footer">پخش آنلاین · بدون بارگذاری موسیقی محلی</footer>
+</main>
+<script>
+(()=>{
+ const audio=document.getElementById('audio'), urlInput=document.getElementById('streamUrl');
+ const playBtn=document.getElementById('playBtn'),stopBtn=document.getElementById('stopBtn'),recordBtn=document.getElementById('recordBtn'),loadBtn=document.getElementById('loadBtn');
+ const status=document.getElementById('status'),liveDot=document.getElementById('liveDot'),liveText=document.getElementById('liveText'),hero=document.getElementById('hero');
+ const recDot=document.getElementById('recDot'),recLabel=document.getElementById('recLabel'),timerEl=document.getElementById('timer'),downloadLink=document.getElementById('downloadLink');
+ let recorder=null,chunks=[],recordStarted=0,timerInterval=null,recording=false,objectUrl=null;
+ function message(text,type=''){status.textContent=text;status.className='status'+(type?' '+type:'')}
+ function applyUrl(){const raw=urlInput.value.trim(); if(!raw){message('ابتدا آدرس مستقیم استریم را وارد کنید.','error');return false} try{const u=new URL(raw);if(!['http:','https:'].includes(u.protocol))throw new Error(); audio.src=u.href; audio.load();message('آدرس استریم ثبت شد؛ برای شنیدن دکمهٔ پخش را بزنید.','success');return true}catch(e){message('آدرس معتبر نیست؛ یک لینک مستقیم HTTP یا HTTPS وارد کنید.','error');return false}}
+ loadBtn.addEventListener('click',applyUrl);
+ urlInput.addEventListener('keydown',e=>{if(e.key==='Enter'){applyUrl();play()}});
+ async function play(){if(!audio.src&&!applyUrl())return;try{await audio.play()}catch(e){message('پخش آغاز نشد. لینک مستقیم را بررسی کنید؛ بعضی ایستگاه‌ها دسترسی مرورگر را محدود می‌کنند.','error')}}
+ playBtn.addEventListener('click',play);
+ stopBtn.addEventListener('click',()=>{audio.pause();audio.currentTime=0;liveDot.classList.remove('on');liveText.textContent='متوقف';hero.classList.remove('playing');stopBtn.disabled=true;message('پخش متوقف شد.')});
+ audio.addEventListener('playing',()=>{liveDot.classList.add('on');liveText.textContent='در حال پخش';hero.classList.add('playing');stopBtn.disabled=false;recordBtn.disabled=false;message('اتصال برقرار شد؛ در حال پخش زنده.','success')});
+ audio.addEventListener('waiting',()=>message('در انتظار دریافت جریان صوتی…'));
+ audio.addEventListener('error',()=>{liveDot.classList.remove('on');liveText.textContent='خطای اتصال';hero.classList.remove('playing');recordBtn.disabled=true;message('دریافت استریم ناموفق بود. آدرس مستقیم، اتصال اینترنت و پشتیبانی CORS را بررسی کنید.','error')});
+ function formatTime(s){return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
+ function stopRecording(){if(recorder&&recorder.state==='recording')recorder.stop()}
+ recordBtn.addEventListener('click',()=>{
+  if(recording){stopRecording();return}
+  const capture=audio.captureStream||audio.mozCaptureStream;
+  if(!window.MediaRecorder||!capture){message('مرورگر شما ضبط زنده (MediaRecorder/captureStream) را پشتیبانی نمی‌کند.','error');return}
+  try{
+   const stream=capture.call(audio); if(!stream.getAudioTracks().length){message('جریان صوتی برای ضبط در دسترس نیست؛ پخش را دوباره آغاز کنید.','error');return}
+   const mime=['audio/webm;codecs=opus','audio/ogg;codecs=opus','audio/webm'].find(t=>MediaRecorder.isTypeSupported(t));
+   recorder=new MediaRecorder(stream,mime?{mimeType:mime}:undefined);chunks=[];
+   recorder.ondataavailable=e=>{if(e.data&&e.data.size)chunks.push(e.data)};
+   recorder.onstop=()=>{recording=false;clearInterval(timerInterval);recordBtn.classList.remove('active');recordBtn.querySelector('span').textContent='ضبط زنده';recDot.classList.remove('active');recLabel.textContent='ضبط به پایان رسید';timerEl.textContent=formatTime(Math.floor((Date.now()-recordStarted)/1000));if(chunks.length){const blob=new Blob(chunks,{type:recorder.mimeType||'audio/webm'});if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=URL.createObjectURL(blob);downloadLink.href=objectUrl;downloadLink.download='radio-recording.'+(blob.type.includes('ogg')?'ogg':'webm');downloadLink.classList.remove('disabled');message('ضبط آمادهٔ دانلود است.','success')}else message('هیچ دادهٔ صوتی برای ذخیره دریافت نشد.','error')};
+   recorder.onerror=()=>message('هنگام ضبط خطایی رخ داد.','error');recorder.start(1000);recording=true;recordStarted=Date.now();downloadLink.classList.add('disabled');recLabel.textContent='در حال ضبط پخش زنده';recDot.classList.add('active');recordBtn.classList.add('active');recordBtn.querySelector('span').textContent='پایان ضبط';message('ضبط زنده آغاز شد.','success');timerInterval=setInterval(()=>timerEl.textContent=formatTime(Math.floor((Date.now()-recordStarted)/1000)),500);
+  }catch(e){message('شروع ضبط ممکن نشد؛ پخش باید فعال باشد و مرورگر از ضبط جریان پشتیبانی کند.','error')}
+ });
+})();
+</script>
+</body></html>
