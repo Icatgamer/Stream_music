@@ -1,1 +1,15 @@
-
+{
+  "name": "NG_Land Online Radio",
+  "short_name": "NG Radio",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "icon.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
