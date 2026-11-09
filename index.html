@@ -115,14 +115,14 @@ svg{width:18px;height:18px;fill:currentColor}@media(max-width:520px){body{paddin
           <span class="station-name">اهنگ ملودی (music melody)</span>
           <span class="station-url-text">https://xgaming.ir/radio/stream/melody</span>
         </div>
-        <button class="copy-use-btn" data-url="https://xgaming.ir/radio/stream/melody" type="button">پخش</button>
+        <button class="copy-use-btn" data-url="https://xgaming.ir/radio/stream/melody" type="button"> پخش</button>
       </div>
       <div class="station-item">
         <div class="station-info">
           <span class="station-name">اهنگ ارامش بخش (music calm)</span>
           <span class="station-url-text">https://xgaming.ir/radio/stream/calm</span>
         </div>
-        <button class="copy-use-btn" data-url="https://xgaming.ir/radio/stream/calm" type="button">پخش</button>
+        <button class="copy-use-btn" data-url="https://xgaming.ir/radio/stream/calm" type="button"> پخش</button>
       </div>
     </div>
 
@@ -196,7 +196,6 @@ svg{width:18px;height:18px;fill:currentColor}@media(max-width:520px){body{paddin
   });
  });
 
-  
  async function play(){if(!audio.src&&!applyUrl())return;try{await audio.play()}catch(e){message('پخش آغاز نشد. لینک مستقیم را بررسی کنید.','error')}}
  playBtn.addEventListener('click',play);
  stopBtn.addEventListener('click',()=>{audio.pause();audio.currentTime=0;liveDot.classList.remove('on');liveText.textContent='متوقف';hero.classList.remove('playing');stopBtn.disabled=true;message('پخش متوقف شد.')});
