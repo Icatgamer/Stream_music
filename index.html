@@ -196,7 +196,6 @@ svg{width:18px;height:18px;fill:currentColor}@media(max-width:520px){body{paddin
   });
  });
 
-
  async function play(){if(!audio.src&&!applyUrl())return;try{await audio.play()}catch(e){message('پخش آغاز نشد. لینک مستقیم را بررسی کنید.','error')}}
  playBtn.addEventListener('click',play);
  stopBtn.addEventListener('click',()=>{audio.pause();audio.currentTime=0;liveDot.classList.remove('on');liveText.textContent='متوقف';hero.classList.remove('playing');stopBtn.disabled=true;message('پخش متوقف شد.')});
