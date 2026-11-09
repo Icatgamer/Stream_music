@@ -186,20 +186,16 @@ svg{width:18px;height:18px;fill:currentColor}@media(max-width:520px){body{paddin
  loadBtn.addEventListener('click',applyUrl);
  urlInput.addEventListener('keydown',e=>{if(e.key==='Enter'){applyUrl();play()}});
 
- // Station Quick Select & Copy Buttons
+ // Station Quick Select & Play Buttons
  document.querySelectorAll('.copy-use-btn').forEach(btn=>{
   btn.addEventListener('click',()=>{
    const streamUrl = btn.getAttribute('data-url');
    urlInput.value = streamUrl;
-   navigator.clipboard.writeText(streamUrl).then(()=>{
-    message('لینک در کلیپ‌بورد کپی شد و در فیلد قرار گرفت!','success');
-   }).catch(()=>{
-    message('لینک در فیلد قرار گرفت.','success');
-   });
    applyUrl();
    play();
   });
  });
+
 
  async function play(){if(!audio.src&&!applyUrl())return;try{await audio.play()}catch(e){message('پخش آغاز نشد. لینک مستقیم را بررسی کنید.','error')}}
  playBtn.addEventListener('click',play);
