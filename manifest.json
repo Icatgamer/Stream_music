@@ -1,6 +1,6 @@
 {
-  "name": "NG_Land Online Radio",
-  "short_name": "NG Radio",
+  "name": "NG_Land Online Player",
+  "short_name": "NG Player",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#0f172a",
