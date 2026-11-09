@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#10121c">
-<title>موج | رادیو آنلاین</title>
+<title>موج | پخش آنلاین</title>
 <style>
 :root{color-scheme:dark;--bg:#10121c;--panel:#191c29;--muted:#9a9db1;--text:#f6f5fb;--purple:#a78bfa;--pink:#f472b6;--green:#59e1ae;--line:#2d3040}
 *{box-sizing:border-box} body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 78% 5%,#342555 0,transparent 34%),radial-gradient(ellipse at 14% 94%,#21343a 0,transparent 30%),var(--bg);color:var(--text);font-family:Tahoma,"Segoe UI",sans-serif;display:grid;place-items:center;padding:28px}
@@ -70,24 +70,59 @@ svg{width:18px;height:18px;fill:currentColor}@media(max-width:520px){body{paddin
     <div class="stations-list" id="stationsList">
       <div class="station-item">
         <div class="station-info">
-          <span class="station-name">رادیو فانک (Station Funk)</span>
-          <span class="station-url-text">https://xgaming.ir/radio/stream/station-funk</span>
+          <span class="station-name">اهنگ های قدیمی (Old Musics)</span>
+          <span class="station-url-text">https://xgaming.ir/radio/stream/station-old</span>
         </div>
         <button class="copy-use-btn" data-url="https://xgaming.ir/radio/stream/station-funk" type="button">کپی و پخش</button>
       </div>
       <div class="station-item">
         <div class="station-info">
-          <span class="station-name">رادیو رپ (Station Rap)</span>
+          <span class="station-name">اهنگ رپ (music Rap)</span>
           <span class="station-url-text">https://xgaming.ir/radio/stream/station-rap</span>
         </div>
         <button class="copy-use-btn" data-url="https://xgaming.ir/radio/stream/station-rap" type="button">کپی و پخش</button>
       </div>
       <div class="station-item">
         <div class="station-info">
-          <span class="station-name">رادیو لوفای (Station Lofi)</span>
+          <span class="station-name">اهنگ لوفای (music Lofi)</span>
           <span class="station-url-text">https://xgaming.ir/radio/stream/station-lo-fi-music</span>
         </div>
         <button class="copy-use-btn" data-url="https://xgaming.ir/radio/stream/station-lo-fi-music" type="button">کپی و پخش</button>
+      </div>
+      <div class="station-item">
+        <div class="station-info">
+          <span class="station-name">اهنگ بندری (music bandari)</span>
+          <span class="station-url-text">https://xgaming.ir/radio/stream/bandari</span>
+        </div>
+        <button class="copy-use-btn" data-url="https://xgaming.ir/radio/stream/bandari" type="button">کپی و پخش</button>
+      </div>
+      <div class="station-item">
+        <div class="station-info">
+          <span class="station-name">اهنگ شمالی (music shomali)</span>
+          <span class="station-url-text">https://xgaming.ir/radio/stream/station-shomali</span>
+        </div>
+        <button class="copy-use-btn" data-url="https://xgaming.ir/radio/stream/station-shomali" type="button">کپی و پخش</button>
+      </div>
+      <div class="station-item">
+        <div class="station-info">
+          <span class="station-name">فاما ریمیکس (famaremix)</span>
+          <span class="station-url-text">https://xgaming.ir/radio/stream/famaremix</span>
+        </div>
+        <button class="copy-use-btn" data-url="https://xgaming.ir/radio/stream/famaremix" type="button">کپی و پخش</button>
+      </div>
+      <div class="station-item">
+        <div class="station-info">
+          <span class="station-name">اهنگ ملودی (music melody)</span>
+          <span class="station-url-text">https://xgaming.ir/radio/stream/melody</span>
+        </div>
+        <button class="copy-use-btn" data-url="https://xgaming.ir/radio/stream/melody" type="button">کپی و پخش</button>
+      </div>
+      <div class="station-item">
+        <div class="station-info">
+          <span class="station-name">اهنگ ارامش بخش (music calm)</span>
+          <span class="station-url-text">https://xgaming.ir/radio/stream/calm</span>
+        </div>
+        <button class="copy-use-btn" data-url="https://xgaming.ir/radio/stream/calm" type="button">کپی و پخش</button>
       </div>
     </div>
 
@@ -97,7 +132,7 @@ svg{width:18px;height:18px;fill:currentColor}@media(max-width:520px){body{paddin
       <button class="btn secondary" id="stopBtn" type="button" disabled><svg viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg><span>توقف</span></button>
       <button class="btn record" id="recordBtn" type="button" disabled><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/></svg><span>ضبط زنده</span></button>
     </div>
-    <div class="status" id="status" role="status" aria-live="polite">برای شروع، آدرس مستقیم استریم را وارد کنید یا روی ایستگاه‌ها بزنید.</div>
+    <div class="status" id="status" role="status" aria-live="polite">برای شروع، آدرس مستقیم استریم را وارد کنید یا روی گزینه بزنید.</div>
     <div class="record-panel"><div class="record-info"><span class="rec-dot" id="recDot"></span><span id="recLabel">ضبط آغاز نشده</span><span class="timer" id="timer">00:00</span></div><a class="download disabled" id="downloadLink" href="#" download>دانلود فایل ضبط‌شده ↓</a></div>
     <p class="footnote">ضبط در مرورگر شما انجام می‌شود و روی سرور ذخیره نمی‌شود. ضبط صدا به پشتیبانی مرورگر و مجوزهای CORS استریم وابسته است.</p>
   </section>
@@ -123,13 +158,13 @@ svg{width:18px;height:18px;fill:currentColor}@media(max-width:520px){body{paddin
  // تنظیمات حالت تعمیر و بروزرسانی (Maintenance Mode)
  // هر زمان خواستید سایت را برای آپدیت ببندید، این را روی true بگذارید:
  // =====================================================================
- const MAINTENANCE_MODE = true; 
+ const MAINTENANCE_MODE = false; 
 
  function updateOnlineStatus(){
   if(MAINTENANCE_MODE){
    modalIcon.textContent = '🛠️';
    modalTitle.textContent = 'بروزرسانی سایت';
-   modalDesc.innerHTML = 'متاسفم سایت موقتا برای خاموش یا برای اپدیت از دسترس خارج شد<br>لطفا کمی صبر کنید و دوباره تلاش کنید';
+   modalDesc.innerHTML = 'متاسفم سایت موقتا خاموش یا برای اپدیت از دسترس خارج شد<br>لطفا کمی صبر کنید و دوباره تلاش کنید';
    offlineOverlay.classList.add('show');
   } else if(!navigator.onLine){
    modalIcon.textContent = '⚠️';
@@ -170,7 +205,7 @@ svg{width:18px;height:18px;fill:currentColor}@media(max-width:520px){body{paddin
  playBtn.addEventListener('click',play);
  stopBtn.addEventListener('click',()=>{audio.pause();audio.currentTime=0;liveDot.classList.remove('on');liveText.textContent='متوقف';hero.classList.remove('playing');stopBtn.disabled=true;message('پخش متوقف شد.')});
  audio.addEventListener('playing',()=>{liveDot.classList.add('on');liveText.textContent='در حال پخش';hero.classList.add('playing');stopBtn.disabled=false;recordBtn.disabled=false;message('اتصال برقرار شد؛ در حال پخش زنده.','success')});
- audio.addEventListener('waiting',()=>message('در انتظار دریافت جریان صوتی…'));
+ audio.addEventListener('waiting',()=>message('در انتظار دریافت لینک صوتی…'));
  audio.addEventListener('error',()=>{liveDot.classList.remove('on');liveText.textContent='خطای اتصال';hero.classList.remove('playing');recordBtn.disabled=true;message('دریافت استریم ناموفق بود.','error')});
  function formatTime(s){return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
  function stopRecording(){if(recorder&&recorder.state==='recording')recorder.stop()}
