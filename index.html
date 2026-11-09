@@ -107,13 +107,13 @@ main{width:min(100%,760px)}
  // تنظیمات حالت تعمیر و بروزرسانی (Maintenance Mode)
  // هر زمان خواستید سایت را برای آپدیت ببندید، این را روی true بگذارید:
  // =====================================================================
- const MAINTENANCE_MODE = false; 
+ const MAINTENANCE_MODE = true; 
 
  function updateOnlineStatus(){
   if(MAINTENANCE_MODE){
    modalIcon.textContent = '🛠️';
    modalTitle.textContent = 'بروزرسانی سایت';
-   modalDesc.innerHTML = 'متاسفم سایت موقتا برای خاموش یا برای اپدیت از دسترس خارج شد<br>لطفا کمی صبر کنید و دوباره تلاش کنید';
+   modalDesc.innerHTML = 'متاسفم سایت موقتا خاموش یا برای اپدیت از دسترس خارج شد<br>لطفا کمی صبر کنید و دوباره تلاش کنید';
    offlineOverlay.classList.add('show');
   } else if(!navigator.onLine){
    modalIcon.textContent = '⚠️';
