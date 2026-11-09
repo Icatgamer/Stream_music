@@ -32,7 +32,14 @@ main{width:min(100%,760px)}
 .copy-use-btn{background:#292c3a;color:var(--purple);border:1px solid #ffffff12;border-radius:8px;padding:6px 12px;font:700 11px Tahoma,sans-serif;cursor:pointer;transition:.15s;white-space:nowrap}
 .copy-use-btn:hover{background:var(--purple);color:white}
 
-.controls{display:flex;justify-content:center;align-items:center;gap:14px;margin:28px 0 22px}.btn{border:0;border-radius:14px;padding:13px 20px;font:700 14px Tahoma,sans-serif;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:.18s;white-space:nowrap}.btn:hover{transform:translateY(-1px);filter:brightness(1.08)}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;filter:none}.primary{background:linear-gradient(120deg,#9b7afa,#c16ddb);color:white;min-width:150px;box-shadow:0 8px 23px #9b7afa30}.secondary{background:#292c3a;color:#eeeeF7;border:1px solid #ffffff12}.record{background:#34202d;color:#ffb6cf;border:1px solid #f472b633}.record.active{background:#5a2030;color:#fff;animation:pulse 1.5s infinite}@keyframes pulse{50%{box-shadow:0 0 0 6px #f472b622}}.status{min-height:22px;text-align:center;color:#b3b5c5;font-size:12px}.status.error{color:#ff9eac}.status.success{color:var(--green)}.record-panel{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#11141f;border:1px solid #ffffff0c;border-radius:14px;padding:13px 16px;margin-top:18px}.record-info{display:flex;align-items:center;gap:10px;font-size:12px;color:#c7c7d4}.rec-dot{width:9px;height:9px;border-radius:50%;background:#606373}.rec-dot.active{background:#ff577e;box-shadow:0 0 12px #ff577e}.timer{direction:ltr;color:#f1d1dd;font-variant-numeric:tabular-nums;font-size:13px}.download{color:#d8caff;text-decoration:none;font-size:12px;font-weight:bold;white-space:nowrap}.download.disabled{opacity:.35;pointer-events:none}.footnote{margin:17px 2px 0;color:#777b90;font-size:10px;line-height:1.8}.footer{text-align:center;color:#777b8e;font-size:11px;margin-top:18px}svg{width:18px;height:18px;fill:currentColor}@media(max-width:520px){body{padding:17px}.top{margin-bottom:18px}.live-badge{font-size:10px;padding:8px}.url-row{flex-direction:column}.url-input{width:100%}.controls{gap:8px}.btn{padding:12px 13px;font-size:12px}.primary{min-width:120px}.record-panel{flex-wrap:wrap}.art{width:138px;height:138px}}
+.controls{display:flex;justify-content:center;align-items:center;gap:14px;margin:28px 0 22px}.btn{border:0;border-radius:14px;padding:13px 20px;font:700 14px Tahoma,sans-serif;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:.18s;white-space:nowrap}.btn:hover{transform:translateY(-1px);filter:brightness(1.08)}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;filter:none}.primary{background:linear-gradient(120deg,#9b7afa,#c16ddb);color:white;min-width:150px;box-shadow:0 8px 23px #9b7afa30}.secondary{background:#292c3a;color:#eeeeF7;border:1px solid #ffffff12}.record{background:#34202d;color:#ffb6cf;border:1px solid #f472b633}.record.active{background:#5a2030;color:#fff;animation:pulse 1.5s infinite}@keyframes pulse{50%{box-shadow:0 0 0 6px #f472b622}}.status{min-height:22px;text-align:center;color:#b3b5c5;font-size:12px}.status.error{color:#ff9eac}.status.success{color:var(--green)}.record-panel{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#11141f;border:1px solid #ffffff0c;border-radius:14px;padding:13px 16px;margin-top:18px}.record-info{display:flex;align-items:center;gap:10px;font-size:12px;color:#c7c7d4}.rec-dot{width:9px;height:9px;border-radius:50%;background:#606373}.rec-dot.active{background:#ff577e;box-shadow:0 0 12px #ff577e}.timer{direction:ltr;color:#f1d1dd;font-variant-numeric:tabular-nums;font-size:13px}.download{color:#d8caff;text-decoration:none;font-size:12px;font-weight:bold;white-space:nowrap}.download.disabled{opacity:.35;pointer-events:none}.footnote{margin:17px 2px 0;color:#777b90;font-size:10px;line-height:1.8}
+
+.footer{text-align:center;color:#8d91a8;font-size:12px;margin-top:22px;line-height:1.8;padding:8px 0;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.footer a{color:var(--purple);text-decoration:none;transition:.15s;display:inline-flex;align-items:center;gap:5px}
+.footer a:hover{color:var(--pink);text-decoration:underline}
+.footer img{width:16px;height:16px;border-radius:3px;vertical-align:middle}
+
+svg{width:18px;height:18px;fill:currentColor}@media(max-width:520px){body{padding:17px}.top{margin-bottom:18px}.live-badge{font-size:10px;padding:8px}.url-row{flex-direction:column}.url-input{width:100%}.controls{gap:8px}.btn{padding:12px 13px;font-size:12px}.primary{min-width:120px}.record-panel{flex-wrap:wrap}.art{width:138px;height:138px}}
 </style>
 </head>
 <body>
@@ -93,7 +100,15 @@ main{width:min(100%,760px)}
     <div class="record-panel"><div class="record-info"><span class="rec-dot" id="recDot"></span><span id="recLabel">ضبط آغاز نشده</span><span class="timer" id="timer">00:00</span></div><a class="download disabled" id="downloadLink" href="#" download>دانلود فایل ضبط‌شده ↓</a></div>
     <p class="footnote">ضبط در مرورگر شما انجام می‌شود و روی سرور ذخیره نمی‌شود. ضبط صدا به پشتیبانی مرورگر و مجوزهای CORS استریم وابسته است.</p>
   </section>
-  <footer class="footer">پخش آنلاین · بدون بارگذاری موسیقی محلی</footer>
+  <footer class="footer">
+    <span>تمامی حقوق سایت برای NG_Land محفوظ است</span>
+    <span>|</span>
+    <span>ارتباط با ما:</span>
+    <a href="https://rubika.ir/joing/+BBGAGJDHJ0SVGUNWTSUOTVSIRBCALFUF" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="vertical-align:middle;margin-left:3px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.03-1.98 1.26-5.59 3.7-.53.36-1.01.54-1.44.53-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.41-.89.03-.25.38-.51 1.05-.78 4.11-1.79 6.85-2.97 8.22-3.54 3.91-1.63 4.72-1.91 5.25-1.92.12 0 .39.03.56.17.15.12.19.28.21.4-.02.13-.01.37-.03.57z"/></svg>
+      گپ روبیکا
+    </a>
+  </footer>
 </main>
 <script>
 (()=>{
@@ -113,7 +128,7 @@ main{width:min(100%,760px)}
   if(MAINTENANCE_MODE){
    modalIcon.textContent = '🛠️';
    modalTitle.textContent = 'بروزرسانی سایت';
-   modalDesc.innerHTML = 'متاسفم سایت موقتا خاموش یا برای اپدیت از دسترس خارج شد<br>لطفا کمی صبر کنید و دوباره تلاش کنید';
+   modalDesc.innerHTML = 'متاسفم سایت موقتا برای خاموش یا برای اپدیت از دسترس خارج شد<br>لطفا کمی صبر کنید و دوباره تلاش کنید';
    offlineOverlay.classList.add('show');
   } else if(!navigator.onLine){
    modalIcon.textContent = '⚠️';
@@ -173,4 +188,5 @@ main{width:min(100%,760px)}
  });
 })();
 </script>
-</body></html>
+</body>
+</html>
